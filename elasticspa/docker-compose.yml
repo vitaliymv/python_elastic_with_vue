@@ -1,0 +1,14 @@
+version: "3"
+
+services:
+  web:
+    build: .
+    container_name: elasticSPA
+    ports:
+      - "8080:8080"
+    networks:
+      - docker-elk_elk
+
+networks:
+  docker-elk_elk:
+    external: true

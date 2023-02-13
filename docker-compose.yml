@@ -1,0 +1,14 @@
+version: "3"
+
+services:
+  reader:
+    build: .
+    container_name: csvReader
+    volumes:
+      - .:/app
+    networks:
+      - docker-elk_elk
+
+networks:
+  docker-elk_elk:
+    external: true
